@@ -87,10 +87,12 @@
 		function setElements(isLoggedIn) {
 			if(isLoggedIn) {
 				document.getElementById('logout').style.display = 'block';
+				document.getElementById('Welcome-text').style.display = 'block';
 				document.getElementById('profile').style.display = 'block';
 				document.getElementById('heading').style.display = 'none';
 				document.getElementById('sign-in').style.display = 'none';
 			} else {
+				document.getElementById('Welcome-text').style.display = 'none';
 				document.getElementById('logout').style.display = 'none';
 				document.getElementById('profile').style.display = 'none';
 				document.getElementById('sign-in').style.display = 'block';
@@ -121,7 +123,11 @@
 	    	<h3 class="container" id="heading">Log in to view your profile</h3>
 
 	    <div class="container sign-in" style="margin-top: 30px;">
-	        <div class="row justify-content-center">
+	    		<div id="profile"></div>
+		    		<div class="container user-data" id="user-data">
+		    			<p class="well text-center" id="Welcome-text">Welcome to Social Login</p>
+		    		</div>
+	        <div class="row justify-content-center" id="sign-in">
 	            <div class="col-md-6 col-offset-3" align="center">
 	                <form>
 	                    <input type="text" class="form-control" placeholder="Email..."><br>
@@ -135,17 +141,13 @@
 	                    
 	                </form>
 
-	        </div>
+	        	</div>
 	        </div>
 	    </div>
 
-	    <div class="container">
-	    	<div id="profile"></div>
-	    </div>
+	    
 
-	    <div class="container user-data" id="user-data">
-	    	<p class="well text-center">Welcome to my App</p>
-	    </div>
+	    
 	
 	</div>
 	
